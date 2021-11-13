@@ -1,8 +1,11 @@
-# ModellingPaper
-DynamicSim.py : dynamic simulation with an initially electro-neutral gel driven to change state by changing the concentration of ions in the bath. Implemented in Fenics
+# Kinetic Polyelectrolyte gel
 
-Equilibria: Folder containing the script for the computation of the bifurcation diagrams
+Codes supporting the publication "A kinetic model of a polyelectrolyte gel undergoing phase separation".
 
-	- BifDiagram: main jupyter notebook in julia for the continuation of the equilibrium solution; the code automatically stores the solution, create plots and 				gif.
-	- FunGel.jl: julia module which contains the functional defining the equilibrium solution and other useful function.
-	- PlotDiagram: jupyter notebook in python for plotting the bifurcation diagram and creating a gif.
+1. Implementation of the dynamic simulation for a costrained gel both for the electroneutral and non-electroneutral scenarios; the code uses finite element implementation in [FEniCS](https://www.https://fenicsproject.org/) (DynamicSim.py). 
+
+2. Computation of the non homogeneous steady states for the a constrained non-electroneutral model (folder Equilibria): 
+	- BifDiagram: main jupyter notebook in Julia based on the [BifurcationKit](https://github.com/rveltz/BifurcationKit.jl) package for the continuation of the equilibrium solution; the code automatically stores the solution, create plots and gif.
+	- FunGel.jl: Julia module which contains the functional defining the equilibrium solution and other useful function.
+	- PlotDiagram: Jupyter notebook in python for plotting the bifurcation diagram and creating a gif.
+
